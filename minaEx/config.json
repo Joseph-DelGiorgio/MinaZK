@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "deployAliases": {
+    "yungjoseph": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/yungjoseph.json",
+      "fee": "0.1",
+      "smartContract": "Add"
+    },
+    "2ndexample": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/2ndexample.json",
+      "fee": "0.1",
+      "smartContract": "Add"
+    }
+  }
+}
