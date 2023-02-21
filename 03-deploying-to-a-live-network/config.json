@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "deployAliases": {
+    "yungjoseph": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "/Users/josephdelgiorgio/minazk/03-deploying-to-a-live-network/keys/yungjoseph.json",
+      "fee": "0.1",
+      "smartContract": "Square"
+    }
+  }
+}
