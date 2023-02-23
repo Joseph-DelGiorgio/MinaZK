@@ -1,0 +1,27 @@
+// Import the Snarky library
+const snarky = require('snarkyjs');
+
+// Define the circuit for summing two numbers
+const circuit = snarky.compile(`
+  type input = {a: field, b: field}
+  type output = field
+
+  let result = input.a + input.b
+  
+  output = result
+`);
+
+// Generate the public and private keys for the proving system
+const keys = snarky.generateKeyPair();
+
+// Define the inputs to the circuit
+const inputs = {a: 2n, b: 3n};
+
+// Prove that the sum of the inputs is correct
+const proof = snarky.prove(circuit, keys.privateKey, inputs);
+
+// Verify the proof
+const verified = snarky.verify(circuit, keys.publicKey, proof, inputs);
+
+console.log(`The sum of ${inputs.a} and ${inputs.b} is ${inputs.a + inputs.b}`);
+console.log(`Proof verified: ${verified}`);
